@@ -1,0 +1,46 @@
+		<div data-project="github-browser">
+
+			<div class="container">
+
+				<h2>Github Browser</h2>
+
+				<div class="controls">
+
+					<ul class="pagination">
+            <% if position == 1 %>
+              <li class="prev"><span class="disabled">&laquo;</span></li>
+            <% else %>
+              <li class="prev"><a href="#">&laquo;</a></li>
+            <% end %>
+            <li><span><%= position %> <em>of</em> <%= total_count %></span></li>	
+            <% if position == total_count %>
+              <li class="next"><span class="disabled">&raquo;</span></li>
+            <% else %>
+						  <li class="next"><a href="#">&raquo;</a></li>						
+            <% end %>
+					</ul>
+
+					<a href="#" class="exit">X</a>
+					
+				</div><!-- end .controls -->
+					
+				<div class="clear"></div>
+
+				<ul class="slider">
+					<li><span class="monitor"><%= image_tag('github-browser.png') %></span></li>
+				</ul>
+
+				<div>
+
+					<h6>Overview</h6>
+
+          <p>Coming soon for your iPad! Follow the development on <a href="https://github.com/oscardelben/GithubBrowser">Github</a>.</p>
+					
+				</div>
+
+					
+			</div><!-- end .container -->
+			
+		</div>
+
+

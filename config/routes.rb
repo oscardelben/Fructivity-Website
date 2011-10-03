@@ -1,8 +1,12 @@
 Fructivity::Application.routes.draw do
   get "pages/index"
+  
+  match '/open_source' => 'pages#open_source'
+  match '/consulting' => 'pages#consulting'
 
 
   root :to => 'pages#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

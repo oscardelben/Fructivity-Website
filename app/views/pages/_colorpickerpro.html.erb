@@ -1,0 +1,70 @@
+		<div data-project="color-picker-pro">
+
+			<div class="container">
+
+				<h2>Color Picker Pro</h2>
+
+				<div class="controls">
+
+					<ul class="pagination">
+            <% if position == 1 %>
+              <li class="prev"><span class="disabled">&laquo;</span></li>
+            <% else %>
+              <li class="prev"><a href="#">&laquo;</a></li>
+            <% end %>
+            <li><span><%= position %> <em>of</em> <%= total_count %></span></li>	
+            <% if position == total_count %>
+              <li class="next"><span class="disabled">&raquo;</span></li>
+            <% else %>
+						  <li class="next"><a href="#">&raquo;</a></li>						
+            <% end %>
+					</ul>
+
+					<a href="#" class="exit">X</a>
+					
+				</div><!-- end .controls -->
+					
+				<div class="clear"></div>
+
+				<ul class="slider">
+					<li><span class="monitor"><%= image_tag('color-picker-pro.png') %></span></li>
+				</ul>
+
+				<div class="one-third">
+
+					<h6>Overview</h6>
+
+          <p>Color Picker Pro is an easy to use color detection tool for developers and designers.</p>
+					
+				</div>
+
+				<div class="one-third">
+
+					<h6>Features</h6>
+
+          <ul>
+            <li>Quickly get color information for any pixel in the screen.</li>
+            <li>Add colors to your clipboard with a system wide hot key.</li>
+            <li>Automatically save previously copied colors.</li>
+            <li>Choose your preferred color style.</li>
+            <li>Works on multiple monitors.</li>
+            <li>Much more!</li>
+          </ul>
+					
+				</div>
+
+				<div class="one-third last">
+
+					<h6>Requirements</h6>
+
+          <p>Color Picker Pro requires Mac OS X 10.5 or higher.</p>
+
+          <p><a href="http://fructivity.s3.amazonaws.com/ColorPickerPro/Color%20Picker%20Pro.zip" class="button active_button">Download FREE</a></p>
+          <p>Or <a href="https://github.com/oscardelben/Color-Picker-Pro">fork on Github</a>.</p>
+					
+				</div>
+					
+			</div><!-- end .container -->
+			
+		</div><!-- end color picker pro (single project) -->
+

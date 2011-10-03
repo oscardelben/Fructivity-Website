@@ -1,0 +1,12 @@
+/* IE9 */
+:root #nav li.active a:after, #nav li.hover a:after, #nav ul li.active a:after { bottom: -19px \0/; }
+
+/* IE8 */
+.search input[type="text"] { background-position: 5px 5px; padding: 3px 10px 5px 25px; }
+
+/* IE7 */
+#header { *padding-bottom: 9px; }
+#nav ul li, .single-project-slider-nav a { zoom:1; *display: inline; }
+.single-project-slider-nav a { *font-size: 0; *text-indent: 0; }
+ul.dotted + ul.dotted:before { *margin-top: -30px; }
+.blog-posts + .blog-posts:before { *margin-top: -50px; }

@@ -1,0 +1,66 @@
+		<div data-project="green-board-pro">
+
+			<div class="container">
+
+				<h2>Color Picker Pro</h2>
+
+				<div class="controls">
+
+					<ul class="pagination">
+            <% if position == 1 %>
+              <li class="prev"><span class="disabled">&laquo;</span></li>
+            <% else %>
+              <li class="prev"><a href="#">&laquo;</a></li>
+            <% end %>
+            <li><span><%= position %> <em>of</em> <%= total_count %></span></li>	
+            <% if position == total_count %>
+              <li class="next"><span class="disabled">&raquo;</span></li>
+            <% else %>
+						  <li class="next"><a href="#">&raquo;</a></li>						
+            <% end %>
+					</ul>
+
+					<a href="#" class="exit">X</a>
+					
+				</div><!-- end .controls -->
+					
+				<div class="clear"></div>
+
+				<ul class="slider">
+					<li><span class="phone"><%= image_tag('green-board-pro-1.png') %></span></li>
+					<li><span class="phone"><%= image_tag('green-board-pro-2.png') %></span></li>
+					<li><span class="phone"><%= image_tag('green-board-pro-3.png') %></span></li>
+					<li><span class="phone"><%= image_tag('green-board-pro-4.png') %></span></li>
+					<li><span class="phone"><%= image_tag('green-board-pro-5.png') %></span></li>
+				</ul>
+
+				<div>
+
+					<h6>Description</h6>
+
+          <p>Imagine if you'd just have that great idea that would change everything in your life.</p>
+
+          <p>We wanted to solve a problem, and solve it really well.</p>
+
+          <p>Introducing Green Board Pro, the iPhone and iPad application that makes it easier for you to track your ideas or everything you want.</p>
+
+          <p>Keet track of ideas, to do lists, and all the stuff that goes through your mind with this simple to use app.</p>
+
+          <p>Features:</p>
+
+          <ul>
+            <li>Keep track of nested lists. No limits.</li>
+            <li>Send your ideas via email.</li>
+            <li>Multiple themes, so you can choose the interface that you like the most.</li>
+          </ul>
+
+          <p><a href="http://itunes.apple.com/us/app/green-board-pro/id415277399?mt=8">Available on the AppStore</a></p>
+
+				</div>
+
+					
+			</div><!-- end .container -->
+			
+		</div>
+
+

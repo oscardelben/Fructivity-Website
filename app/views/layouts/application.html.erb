@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-  <title>Fructivity</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Fructivity</title>
+
+  <%= stylesheet_link_tag 'reset' %>
+	
+	<!--[if ! lte IE 6]><!-->
+  <%= stylesheet_link_tag 'style' %>
+	<!--<![endif]-->
+
+	<!--[if gt IE 6]>
+  <%= stylesheet_link_tag 'ie' %>
+	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+
+  <%= stylesheet_link_tag 'fancybox' %>
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Open+Sans:300,400,400italic,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="container">
-    <h1>Fructivity</h1>
-    <h2>iOS/Mac and Web Development</h2>
-  </div>
-  
-  <%= yield %>
 
-    <div class="container copyright">
-      <p>&copy; 2011 Fructivity. <a href="mailto:hello@fructivity.com">Support</a></p>
-    </div>
+<div id="header">
 
+	<div class="container">
+
+		<a href="index.html" id="logo">Fructivity</a>
+
+		<ul class="social-links">
+			<li class="twitter"><a href="http://twitter.com/#!/oscardelben">Twitter</a></li>
+		</ul>
+		<ul id="nav">
+      <li<%=raw ' class="active"' if controller.action_name.to_s == 'index' %>><%= link_to 'Home', '/' %></li>
+			<li<%=raw ' class="active"' if controller.action_name.to_s == 'open_source' %>><%= link_to 'Open Source', '/open_source' %></li>
+			<li<%=raw ' class="active"' if controller.action_name.to_s == 'consulting' %>><%= link_to 'Hire Fructivity', '/consulting' %></li>
+		</ul>
+		
+	</div><!-- end .container -->
+	
+</div><!-- end #header -->
+
+<div class="clear"></div>
+
+<%= yield %>
+
+
+<div id="footer">
+
+	<div class="container">
+
+    <p class="align-left">&copy; 2011, Fructivity. All right reserved. <%= mail_to 'hello@fructivity.com' %>.</p>
+
+		<ul class="social-links align-right">
+			<li class="twitter"><a href="http://twitter.com/#!/oscardelben">Twitter</a></li>
+		</ul>
+		
+	</div><!-- end .container -->
+	
+</div><!-- end #footer -->
+
+<!-- start JS Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>
+<!--[if lt IE 9]>
+<script src="js/IE9.js"></script>
+<script src="js/selectivizr-min.js"></script>
+<![endif]-->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<%= javascript_include_tag 'jquery.gridnav.js' %>
+<%= javascript_include_tag 'jquery.cycle.all.js' %>
+<%= javascript_include_tag 'jquery.jcarousel.min.js' %>
+<%= javascript_include_tag 'jquery.fancybox-1.3.4.pack.js' %>
+<%= javascript_include_tag 'jquery.easing.1.3.js' %>
+<%= javascript_include_tag 'gmap3.min.js' %>
+<%= javascript_include_tag 'custom.js' %>
+<!-- end JS Scripts -->
 
     <% if Rails.env.production? %>
       <script type="text/javascript">
@@ -30,9 +94,9 @@
          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
          })();
-      <% end %>
 
-    </script>
+      </script>
+    <% end %>
   
 
 </body>
